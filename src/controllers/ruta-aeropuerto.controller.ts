@@ -11,7 +11,8 @@ import {
   Aeropuerto,
 } from '../models';
 import {RutaRepository} from '../repositories';
-
+import {authenticate} from '@loopback/authentication';
+@authenticate("admin")
 export class RutaAeropuertoController {
   constructor(
     @repository(RutaRepository)
